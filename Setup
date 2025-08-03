@@ -1,0 +1,29 @@
+1. Clone the repo
+bash
+Copy
+Edit
+git clone https://github.com/YOUR_USERNAME/usb-device-blocker.git
+cd usb-device-blocker
+2. Enable and start usbguard
+bash
+Copy
+Edit
+sudo systemctl enable usbguard
+sudo systemctl start usbguard
+3. Create whitelist of approved devices
+List currently connected devices:
+
+bash
+Copy
+Edit
+usbguard list-devices | grep present
+Copy the ID field (e.g. 0781:5567) for devices you trust.
+
+Edit the allowed_usb.txt file and add each trusted ID on a separate line.
+
+4. Run the blocker
+bash
+Copy
+Edit
+sudo python3 usbblocker.py
+The script will continuously monitor connected USB devices and block any that aren't on the whitelist.
