@@ -137,5 +137,3 @@ This project was built as part of my ongoing learning in Linux security, system 
 📜 License
 
 MIT
-sudo apt update
-sudo apt install usbguard python3
