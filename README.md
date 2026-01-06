@@ -58,7 +58,6 @@ This approach keeps the logic simple while relying on `usbguard` for enforcement
 
 ### Install dependencies
 
-```bash
 sudo apt update
 sudo apt install usbguard python3
 
